@@ -1,0 +1,229 @@
+<ui:composition template="/templates/template.xhtml"
+	  xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:ui="http://java.sun.com/jsf/facelets"
+	  xmlns:h="http://java.sun.com/jsf/html"
+	  xmlns:f="http://java.sun.com/jsf/core"
+	  xmlns:p="http://primefaces.org/ui"
+	  xmlns:b="http://bootsfaces.net/ui">
+      <ui:define name="content">
+      		<h:form id="signUp">
+      			<f:metadata>
+      				<f:event listener="#{signUp.onLoad()}" type="preRenderView"></f:event>
+		        </f:metadata>
+		        
+      		<!-- Wrap -->
+			<div id="wrap">
+				<!-- Header -->
+		        <header id="header" class="header">
+		            <div class="container">
+		                <!-- Logo -->
+		                <div class="logo float-left">
+		                    <h:commandLink action="goToHome">
+		                    	<p:graphicImage library="images" name="logo-header.png"></p:graphicImage>
+		                    </h:commandLink>
+		                </div>
+		                <!-- End Logo -->
+		                <!-- Bars -->
+		                <div class="bars" id="bars"></div>
+		                <!-- End Bars -->
+		
+		                <!--Navigation-->
+		                <nav class="navigation nav-c" id="navigation" data-menu-type="1200">
+		                    <div class="nav-inner">
+		                        <a href="#" class="bars-close" id="bars-close">Close</a>
+		                        <div class="tb">
+		                        	<div class="tb-cell">
+		                                <ul class="menu-list text-uppercase">
+		                                    <li>
+		                                        <p:commandLink action="goToHome" value="Home"></p:commandLink>
+		                                    </li>
+		                                    <li>
+		                                        <a href="#" title="">Car</a>
+		                                        <ul class="sub-menu">
+		                                            <li>
+		                                                <a href="home-car.html" title="">Car</a>
+		                                            </li>
+		                                            <li>
+		                                                <a href="car-list.html">Cart List</a>
+		                                            </li>
+		                                        </ul>
+		                                    </li>
+		                                    <li>
+		                                        <a href="#" title="">Motorcycle</a>
+		                                        <ul class="sub-menu">
+		                                            <li>
+		                                                <a href="home-cruise.html" title="">Motorcycle</a>
+		                                            </li>
+		                                            <li>
+		                                                <a href="cruise-list.html">Motorcycle List</a>
+		                                            </li>
+		                                            <li>
+		                                                <a href="cruise-detail.html">Motorcycle Detail</a>
+		                                            </li>
+		                                        </ul>
+		                                    </li>
+		                                    <li>
+		                                        <a href="#" title="">Accommodation</a>
+		                                        <ul class="sub-menu">
+		                                            <li>
+		                                                <a href="home-cruise.html" title="">Accommodation</a>
+		                                            </li>
+		                                            <li>
+		                                                <a href="cruise-list.html">Accommodation List</a>
+		                                            </li>
+		                                            <li>
+		                                                <a href="cruise-detail.html">Accommodation Detail</a>
+		                                            </li>
+		                                        </ul>
+		                                    </li>
+		                                    <li class="current-menu-parent">
+		                                        <a class="current-menu-item" href="#" title="">Sign In/ Sign Up</a>
+		                                    </li>
+		                                </ul>
+		                            </div>
+		                        </div>
+		                    </div>
+		                </nav>
+		                <!--End Navigation-->
+		            </div>
+		        </header>
+		        <!-- End Header -->
+	
+		        <!--Banner-->
+		        <section class="sub-banner">
+		            <!--Background-->
+		            <div class="bg-parallax bg-1"></div>
+		            <!--End Background-->
+		            <!-- Logo -->
+		            <div class="logo-banner text-center">
+		                <a href="" title="">
+		                    <img src="resources/images/logo-banner.png" alt="" />
+		                </a>
+		            </div>
+		            <!-- Logo -->
+		        </section>
+		        <!--End Banner-->
+	
+		        <!-- Main -->
+		        <div class="main">
+		            <div class="container">
+		                <div class="main-cn element-page bg-white clearfix">
+		                    <!--Breakcrumb-->
+		                    <section class="breakcrumb-sc">
+		                        <ul class="breadcrumb arrow">
+		                            <li><a href="index.html"><i class="fa fa-home"></i></a></li>
+		                            <li>User Reviews</li>
+		                        </ul>
+		                        <div class="support float-right">
+		                            <small>Got a question?</small> 082218318381
+		                        </div>
+		                    </section>
+		                    <!--End Breakcrumb-->
+		                    
+		                    <section class="user-profile">
+		                    	<div class="user-form user-signup">
+		                    		<div class="row">
+		                    			<br/>
+				                    	<h:messages id="messages" showSummary="true" showDetail="true"/>
+		                                <div class="col-md-5">
+		                                    <h2 class="user-profile__title">Sign in</h2>
+		                                    <p>Access your account information and manage your bookings.</p>
+		                                    <div class="field-input">
+		                                    	<p:inputText styleClass="input-text" id="email"></p:inputText>
+		                                    </div>
+		                                    <div class="field-input">
+		                                        <p:password styleClass="input-text" id="password"></p:password>
+		                                    </div>
+		                                    <div class="field-input">
+		                                        <div class="check-box">
+		                                            <h:selectBooleanCheckbox id="checkbox" />
+		                                            <label for="checkbox">Keep me logged in</label>
+		                                        </div>
+		                                        <h:outputText value="&#160;" />
+		                                        <h:outputText value="&#160;" />
+		                                        <p:commandLink action="goToGetPassword">Get a new password</p:commandLink>
+		                                    </div>
+		                                    <div class="field-input">
+		                                    	<h:commandButton styleClass="awe-btn awe-btn-1 awe-btn-medium" value="Sign In"></h:commandButton>
+		                                    </div>
+		                                </div>
+		                                <div class="col-md-5 col-md-offset-2">
+		                                    <h2 class="user-profile__title">Sign up</h2>
+		                                    <p>Sign up now and receive exclusive offers with huge discounts </p>
+		                                    <div class="field-input">
+		                                    	<p:inputText styleClass="input-text" id="first_name" value="#{signUp.profile.firstname}"></p:inputText>
+		                                    </div>
+		                                    
+		                                    <div class="field-input">
+		                                    	<p:inputText styleClass="input-text" id="last_name" value="#{signUp.profile.lastname}"></p:inputText>
+		                                    </div>
+		                                    
+		                                    <div class="field-input">
+		                                    	<p:inputText styleClass="input-text" id="emails" value="#{signUp.profile.email}"></p:inputText>
+		                                    </div>
+		                                    
+		                                    <div class="field-input">
+		                                    	<p:inputText styleClass="input-text" id="passwords" value="#{signUp.user.password}"></p:inputText>
+		                                    </div>
+		                                    
+		                                    <div class="field-input">
+		                                        <div class="check-box">
+		                                            <h:selectBooleanCheckbox id="offers" />
+		                                            <label for="offers"> Send me Special Offers &amp; Promotions</label>
+		                                        </div>
+		                                    </div>
+		                                    <div class="field-input">
+		                                    	<h:commandButton action="#{signUp.doSave()}" styleClass="awe-btn awe-btn-1 awe-btn-medium" value="Sign Up"
+		                                    		onclick="if (! confirm('#{message.get('message.confirm.register')}')) return false">
+		                                    	</h:commandButton>
+		                                    </div>
+		                                </div>
+		                            </div>
+		                        </div>
+		                    </section>
+		                </div>
+		            </div>
+		        </div>
+		        <!-- End Main -->
+	    	</div>
+		</h:form>
+		<h:outputScript rendered="#{not empty signUp.errorMsg}">
+			alert("#{signUp.errorMsg}");
+		</h:outputScript>
+		<style>
+			.listStyle{
+				list-style: none;
+			}
+		</style>
+		<script>
+			/* function isValid(){
+				swal({
+					title: "Are you sure?",
+					text: "You are agree with term and conditions!",
+					type: "info",
+					showCancelButton: true,
+					confirmButtonColor: "#59c45a",
+					closeOnConfirm: false,
+					showLoaderOnConfirm: true
+					}, function(){
+						setTimeout(function(){
+							swal("Ajax request finished!");
+						}, 2000);
+				});
+				return false;
+			} */
+			
+			window.onload = function(){
+				document.getElementById("signUp:first_name").focus();
+			}
+			onload.preventDefault;
+			
+		   	document.getElementById("signUp:email").setAttribute('placeholder','Email *');
+		   	document.getElementById("signUp:first_name").setAttribute('placeholder','First Name *');
+		   	document.getElementById("signUp:last_name").setAttribute('placeholder','Last Name *');
+		   	document.getElementById("signUp:emails").setAttribute('placeholder','Email *');
+		   	document.getElementById("signUp:password").setAttribute('placeholder','Password *');
+		   	document.getElementById("signUp:passwords").setAttribute('placeholder','Password *');
+		</script>
+      </ui:define>	
+</ui:composition>

@@ -1,0 +1,54 @@
+<ui:composition template="/templates/template.xhtml"
+	  xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:ui="http://java.sun.com/jsf/facelets"
+	  xmlns:h="http://java.sun.com/jsf/html"
+	  xmlns:f="http://java.sun.com/jsf/core"
+	  xmlns:p="http://primefaces.org/ui"
+	  xmlns:b="http://bootsfaces.net/ui">
+	  <ui:define name="content">
+	  <h:form id="error">
+	  	<!-- Wrap -->
+    	<div id="wrap">
+        
+        <!-- Not found -->
+        <section class="page-not-found">
+            <!--Background-->
+            <div class="bg-parallax bg-1"></div>
+            <!--End Background-->
+            <div class="container">
+                <!-- Logo -->
+                <div class="logo-page text-center">
+                	<h:commandLink action="goToHome">
+                		<p:graphicImage library="images" name="logo-banner.png"></p:graphicImage>
+                	</h:commandLink>
+                </div>
+                <!-- Logo -->
+                <div class="page-body text-center">
+                    <div class="item-content">
+                        <div class="image-wrap">
+                        	<p:graphicImage library="images" name="404.png"></p:graphicImage>
+                        </div>
+                        <h4>We’re really sorry!</h4>
+                        <p>Something went wrong trying to display the page,<br />Please try one of these instead</p>
+                    </div>
+                    <div class="item-footer">
+                    	<h:commandLink action="goToHome" value="GO home" styleClass="awe-btn awe-btn-5 arrow-right awe-btn-small text-uppercase" />
+                        <h:commandLink value="GO previous page" styleClass="awe-btn awe-btn-5 arrow-right awe-btn-small text-uppercase" onclick="goBack()" />
+                    </div>
+
+                </div>
+            </div>
+
+
+        </section>
+        <!-- End Not found -->
+        </div>
+	  </h:form>
+	  
+	  	<script>
+	  		function goBack() {
+		  		window.history.back();
+			}
+		</script>
+	  </ui:define>
+</ui:composition>

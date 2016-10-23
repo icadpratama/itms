@@ -1,0 +1,143 @@
+<!--[if IE 7 ]> <html class="ie ie7"> <![endif]-->
+<!--[if IE 8 ]> <html class="ie ie8"> <![endif]-->
+<!--[if IE 9 ]> <html class="ie ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:p="http://primefaces.org/ui"
+    xmlns:b="http://bootsfaces.net/ui">
+<!--<![endif]-->
+	
+	<f:loadBundle basename="resources.message" var="msg"/>
+	
+	<h:head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<meta name="format-detection" content="telephone=no"/>
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		
+		<!-- Font Google -->
+		<link href='http://fonts.googleapis.com/css?family=Lato:300,400%7COpen+Sans:300,400,600' rel='stylesheet' type='text/css' />
+		<!-- End Font Google -->
+		
+		<title>
+	    	<h:outputText value="#{msg.title}" />
+	    </title>
+		
+		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" />
+	    <h:outputStylesheet name="css/library/bootstrap.min.css"></h:outputStylesheet>
+	    <h:outputStylesheet name="css/library/jquery-ui.min.css"></h:outputStylesheet>
+	    <h:outputStylesheet name="css/library/owl.carousel.css"></h:outputStylesheet>
+	    <h:outputStylesheet name="css/library/jquery.mb.YTPlayer.min.css"></h:outputStylesheet>
+	    <h:outputStylesheet name="css/library/sweetalert.css"></h:outputStylesheet>
+	    <h:outputStylesheet name="css/style.css"></h:outputStylesheet>
+	</h:head>
+	
+	<h:body>
+		<!-- Preloader -->
+		<div id="preloader">
+			<div class="tb-cell">
+				<div id="page-loading">
+					<div></div>
+                	<p>Loading</p>
+                </div>
+           	</div>
+        </div>
+		
+		
+			<ui:insert name="content"></ui:insert>
+			<!-- Footer -->
+	        <footer>
+	            <div class="container">
+	                <div class="row">
+	                    <!-- Logo -->
+	                    <div class="col-md-4">
+	                        <div class="logo-foter">
+	                            <a href="index.html" title="">
+	                            	<p:graphicImage name="images/logo-footer.png"></p:graphicImage>
+	                            </a>
+	                        </div>
+	                    </div>
+	                    <!-- End Logo -->
+	                    <!-- Navigation Footer -->
+	                    <div class="col-xs-6 col-sm-3 col-md-2">
+	                        <div class="ul-ft">
+	                            <ul>
+	                                <li><a href="about.html" title="">About</a></li>
+	                                <li><a href="blog.html" title="">Blog</a></li>
+	                                <li><a href="fqa.html" title="">FQA</a></li>
+	                                <li><a href="careers.html" title="">Carrers</a></li>
+	                            </ul>
+	                        </div>
+	                    </div>
+	                    <!-- End Navigation Footer -->
+	                    <!-- Navigation Footer -->
+	                    <div class="col-xs-6 col-sm-3 col-md-2">
+	                        <div class="ul-ft">
+	                            <ul>
+	                                <li><a href="contact.html" title="">Contact Us</a></li>
+	                                <li><a href="#" title="">Privacy Policy</a></li>
+	                                <li><a href="#" title="">Term of Service</a></li>
+	                                <li><a href="#" title="">Security</a></li>
+	                            </ul>
+	                        </div>
+	                    </div>
+	                    <!-- End Navigation Footer -->
+	                    <!-- Footer Currency, Language -->
+	                    <div class="col-sm-6 col-md-4">
+	                        <!-- Language -->
+	                        <div>
+	                            <div>
+	                                <br/> <!-- Language List -->
+	                            </div>
+	                            <div>
+	                                <br/><br/>
+	                            </div>
+	                        </div>
+	                        <!-- End Language -->
+	                        <!-- Currency -->
+	                        <div>
+	                            <div>
+	                                <br/>
+	                            </div>
+	                            <div>
+	                                <br/><br/> <!-- Currency List -->
+	                            </div>
+	                        </div>
+	                        <!-- End Currency -->
+	                        <!--CopyRight-->
+	                        <p class="copyright">
+	                            © 
+	                            <h:outputText value="#{now}">
+	                            	<f:convertDateTime pattern="yyyy" type="date" />
+	                            </h:outputText> 
+	                            GTS Travel™ All rights reserved.
+	                        </p>
+	                        <!--CopyRight-->
+	                    </div>
+	                    <!-- End Footer Currency, Language -->
+	                </div>
+	            </div>
+	        </footer>
+	        <!-- End Footer -->
+		<!-- Library JS -->
+		<h:outputScript name="js/library/jquery-1.11.0.min.js"></h:outputScript>
+		<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+		<h:outputScript name="js/library/jquery-ui.min.js"></h:outputScript>
+		<h:outputScript name="js/library/bootstrap.min.js"></h:outputScript>
+		<h:outputScript name="js/library/owl.carousel.min.js"></h:outputScript>
+		<h:outputScript name="js/library/parallax.min.js"></h:outputScript>
+		<h:outputScript name="js/library/jquery.nicescroll.js"></h:outputScript>
+		<h:outputScript name="js/library/jquery.ui.touch-punch.min.js"></h:outputScript>
+		<h:outputScript name="js/library/jquery.mb.YTPlayer.min.js"></h:outputScript>
+		<h:outputScript name="js/library/SmoothScroll.js"></h:outputScript>
+		<h:outputScript name="js/library/sweetalert.min.js"></h:outputScript>
+		<!-- End Library JS -->
+		
+		<!-- Main Js -->
+		<h:outputScript name="js/script.js"></h:outputScript>
+	    <!-- End Main Js -->    
+	</h:body>
+</html>
