@@ -10,6 +10,8 @@
 			<default-locale>en</default-locale>
 		</locale-config>
 	</application>
+	<application>
+	</application>
 	
 	<managed-bean>
 		<managed-bean-name>currentDate</managed-bean-name>

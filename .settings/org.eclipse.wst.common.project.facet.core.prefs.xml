@@ -4,11 +4,6 @@
       <attribute name="provider-id" value="jsf-user-library-provider"/>
     </node>
   </facet>
-  <facet id="jst.jsf.trinidad">
-    <node name="libprov">
-      <attribute name="provider-id" value="user-library-provider-jsf-trinidad"/>
-    </node>
-  </facet>
   <facet id="jst.jstl">
     <node name="libprov">
       <attribute name="provider-id" value="user-library-provider-jstl"/>
